@@ -5,15 +5,28 @@ int main()
     int a;
     printf("Enter month number: ");
     scanf("%d", &a);
+    switch(a)
+    {
+        case 1:
+        case 3:
+        case 5:
+        case 7: 
+        case 8:
+        case 10:
+        case 12:
+            printf("31 days");
+            break; 
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            printf("30 days");
+            break;
+        case 2:
+            printf(" 28 or 29");
+            break;
+        default:
+            printf("invalid month number");
+    }
 
-    if (a == 1 || a == 3 || a == 5 || a == 7 || a == 8 || a == 10 || a == 12)
-        printf("31 days\n");
-    else if (a == 4 || a == 6 || a == 9 || a == 11)
-        printf("30 days\n");
-    else if (a == 2)
-        printf("28 or 29 days (depending on whether it's a leap year)\n");
-    else
-        printf("Invalid month number\n");
-
-    return 0;
 }
