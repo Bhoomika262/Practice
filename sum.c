@@ -1,15 +1,17 @@
 #include<stdio.h>
 
-void sum()
+void sum(int a, int b)
 {
-    int a,b;
-    printf("Enter two numbers: \n");
-    scanf("%d%d",&a,&b);
-    printf("%d",a+b);
+    int c;
+    c=a+b;
+    printf("%d",c);
 }
 
 main()
 {
-    sum();
+    int x,y;
+    printf("Enter 2 numbers: ");
+    scanf("%d%d",&x,&y);
+    sum(x,y);
     getch();
 }
